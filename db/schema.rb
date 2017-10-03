@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 20170912154802) do
   add_index "friends", ["user_id", "friend_user_id"], name: "index_friends_on_user_id_and_friend_user_id", unique: true, using: :btree
 
   create_table "likes", force: :cascade do |t|
-    t.boolean  "liked",      default: false
     t.integer  "status_id"
     t.integer  "user_id"
     t.datetime "created_at"
