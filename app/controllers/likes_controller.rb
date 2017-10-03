@@ -1,6 +1,9 @@
 class LikesController < ApplicationController
   before_action :set_like, only: [:destroy]
 
+  def index
+    @likes = Like.all
+  end
   # POST /likes
   def create
     @status = Status.find(like_params[:status])
