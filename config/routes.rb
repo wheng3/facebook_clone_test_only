@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 	resources :statuses
 	resources :likes, only: [:create, :destroy]
 	resources :sessions
-	root 'statuses#index'
+	root 'welcome#index'
 end
