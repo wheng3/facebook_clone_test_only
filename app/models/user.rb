@@ -16,6 +16,7 @@ class User < ActiveRecord::Base
 	validates :password_confirmation, presence: true
 	validates_format_of :email, {with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/}
 
+	has_secure_password
 
     def is_friend?(user)
     	return self.friends.include?(user)
